@@ -4,6 +4,10 @@ A simple (and bad) cellular automata written in C using SDL2 to render the displ
 
 A matrix of cells is generated with varying ages and colors. During each update step, any alive cell can attack a neighboring cell of a different color (if # of neighbors > 1), run away (if # of neighbors = 1), or wander (if # of neighbors = 0). Any dead cell can be reborn as the offspring of the two brightest neighboring cells, if the two parents are within mating range color-wise. Each generation, there is a chance of genetic disease occurring, represented by a black square in drawn in the diseased cell. Diseased cells have a significantly shorter lifespan and serve as a measure to deter homogeny (since that's boring). This is also achieved by the color of offspring being a mixture of both parents' colors. This process repeats ad infinitum until you either pause the close the simulation.
 
+Example
+-------
+![](demo.gif)
+
 Usage
 -----
 0. Install SDL2 development packages (Ex. `sudo apt install libsdl2-dev`)
